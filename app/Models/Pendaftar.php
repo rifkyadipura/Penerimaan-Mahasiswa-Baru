@@ -11,8 +11,8 @@ class Pendaftar extends Model
     use HasFactory;
     protected $table='Pendaftar';
     protected $primaryKey='pendaftar_id';
-    public const CREATED_AT="create_date";
-    public const UPDATED_AT="update_date";
+    public const CREATED_AT="created_at";
+    public const UPDATED_AT="updated_at";
     protected $guarded = ['pendaftar_id'];
     // protected $fillable = ["nama", "nik", "email", "password", "keterangan", "create_date", "update_date"];
 

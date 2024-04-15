@@ -107,7 +107,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="foto_diri">Pas Foto</label>
-                                        {{-- <input type="file" class="form-control" name="foto_diri" id="foto_diri" value="{{ $pendaftar->foto_diri }}"> --}}
+                                        <input type="file" class="form-control" name="foto_diri" id="foto_diri" value="foto_diri">
                                         <a href="{{ asset('pas_foto/' . $pendaftar->foto_diri) }}" target="_blank" class="d-block">
                                             <img src="{{ asset('pas_foto/' . $pendaftar->foto_diri) }}" class="img-thumbnail img-fluid" style="height: 220px; object-fit: cover" alt="Foto Diri">
                                         </a>
@@ -118,7 +118,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="program_studi">Program Studi</label>
+                                        <label for="program_studi">Program Studi ke 1</label>
                                         <select name="program_studi" class="form-select">
                                             <option>Pilih</option>
                                             <option value="D4 Teknik Informatika" {{old('program_studi',$pendaftar->program_studi)=="D4 Teknik Informatika"? 'selected':''}}>D4 Teknik Informatika</option>
@@ -128,6 +128,21 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="program_studi2">Program Studi ke 2</label>
+                                        <select name="program_studi2" class="form-select">
+                                            <option>Pilih</option>
+                                            <option value="D4 Teknik Informatika" {{old('program_studi',$pendaftar->program_studi2)=="D4 Teknik Informatika"? 'selected':''}}>D4 Teknik Informatika</option>
+                                            <option value="D3 Teknik Informatika" {{old('program_studi',$pendaftar->program_studi2)=="D3 Teknik Informatika"? 'selected':''}}>D3 Teknik Informatika</option>
+                                            <option value="D4 Manajemen Bisnis" {{old('program_studi',$pendaftar->program_studi2)=="D4 Manajemen Bisnis"? 'selected':''}}>D4 Manajemen Bisnis</option>
+                                            <option value="D3 Manajemen Bisnis" {{old('program_studi',$pendaftar->program_studi2)=="D3 Manajemen Bisnis"? 'selected':''}}>D3 Manajemen Bisnis</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="jalur_masuk">Jalur Masuk</label>

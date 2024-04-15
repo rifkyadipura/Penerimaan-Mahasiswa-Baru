@@ -44,7 +44,7 @@ class PendaftarController extends Controller
     {
         $pendaftar = Pendaftar::find($request->id);
         $pendaftar->keterangan=$request->get("keterangan");
-        $pendaftar->update_date=now();
+        $pendaftar->UPDATED_AT=now();
         $pendaftar->update();
         // dd($pendaftar);
         // $pendaftar->update([

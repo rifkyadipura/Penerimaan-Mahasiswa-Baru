@@ -114,7 +114,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label for="program_studi">Program Studi</label>
+                                    <label for="program_studi">Program Studi ke 1</label>
                                     <select name="program_studi" class="form-select" disabled>
                                         <option>Pilih</option>
                                         <option value="D4 Teknik Informatika" {{old('program_studi',$pendaftar->program_studi)=="D4 Teknik Informatika"? 'selected':''}}>D4 Teknik Informatika</option>
@@ -126,6 +126,21 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
+                                    <label for="program_studi">Program Studi ke 2</label>
+                                    <select name="program_studi" class="form-select" disabled>
+                                        <option>Pilih</option>
+                                        <option value="D4 Teknik Informatika" {{old('program_studi',$pendaftar->program_studi2)=="D4 Teknik Informatika"? 'selected':''}}>D4 Teknik Informatika</option>
+                                        <option value="D3 Teknik Informatika" {{old('program_studi',$pendaftar->program_studi2)=="D3 Teknik Informatika"? 'selected':''}}>D3 Teknik Informatika</option>
+                                        <option value="D4 Manajemen Bisnis" {{old('program_studi',$pendaftar->program_studi2)=="D4 Manajemen Bisnis"? 'selected':''}}>D4 Manajemen Bisnis</option>
+                                        <option value="D3 Manajemen Bisnis" {{old('program_studi',$pendaftar->program_studi2)=="D3 Manajemen Bisnis"? 'selected':''}}>D3 Manajemen Bisnis</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
                                     <label for="jalur_masuk">Jalur Masuk</label>
                                     <select name="jalur_masuk" class="form-select" disabled>
                                         <option>Pilih</option>
@@ -135,8 +150,6 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="keterangan">Keterangan</label>
