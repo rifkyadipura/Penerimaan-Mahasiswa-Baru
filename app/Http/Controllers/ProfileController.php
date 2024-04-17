@@ -17,7 +17,7 @@ class ProfileController extends Controller
     {
         $user_id = Auth::user()->id;
         $pendaftar = Pendaftar::where('user_id', $user_id)->first();
-        // dd($pendaftar);
+
         return view('pendaftar.profile.index', compact('pendaftar'));
     }
 

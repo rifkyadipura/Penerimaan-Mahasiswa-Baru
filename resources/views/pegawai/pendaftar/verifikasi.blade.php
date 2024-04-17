@@ -140,7 +140,6 @@
                                      </select>
                                 </div>
                             </div>
-                            {{-- <textarea name="keterangan" class="form-control" placeholder="Keterangan">{{ $data->keterangan }}</textarea> --}}
                         </div>
 
                         <div class="form-group">

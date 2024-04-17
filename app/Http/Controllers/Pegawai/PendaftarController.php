@@ -18,6 +18,7 @@ class PendaftarController extends Controller
     public function index()
     {
         $pendaftar = Pendaftar::getListPendaftar();
+
         return view("pegawai.pendaftar.index", compact('pendaftar'));
     }
 

@@ -96,7 +96,7 @@ class BiodataController extends Controller
     public function show($pendaftar_id)
     {
         $pendaftar = Pendaftar::where('pendaftar_id', $pendaftar_id)->first();
-        // dd($pendaftar);
+
         return view('pendaftar.biodata.showBiodata', compact('pendaftar'));
     }
 
@@ -109,7 +109,7 @@ class BiodataController extends Controller
     public function edit($pendaftar_id)
     {
         $pendaftar = Pendaftar::where('pendaftar_id', $pendaftar_id)->first();
-        // dd($pendaftar);
+
         return view("pendaftar.biodata.editBiodata", compact('pendaftar'));
     }
 
@@ -152,7 +152,7 @@ class BiodataController extends Controller
     public function delete($pendaftar_id)
     {
         $pendaftar = Pendaftar::find($pendaftar_id);
-        // dd($pendaftar);
+
         $pendaftar->delete();
         return redirect()->route('biodata.index')->with('success', 'Berhasil Delete Biodata');
     }
