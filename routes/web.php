@@ -32,6 +32,11 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::middleware(['role:0'])->group(function () {
         Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.pendaftar');
+
+        Route::get('profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.index');
+        Route::post('profile/update/{pendaftar_id}', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+
+        // pendaftar
         Route::get('pendaftar/biodata', [App\Http\Controllers\BiodataController::class, 'index'])->name('biodata.index');
         Route::get('pendaftar/biodata/create', [App\Http\Controllers\BiodataController::class, 'create'])->name('biodata.create');
         Route::post('pendaftar/biodata/simpan', [App\Http\Controllers\BiodataController::class, 'simpan'])->name('biodata.simpan');

@@ -104,7 +104,7 @@
                                         <input type="email" class="form-control" name="email" id="email" value="{{ $pendaftar->email }}" readonly>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                {{-- <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="foto_diri">Pas Foto</label>
                                         <input type="file" class="form-control" name="foto_diri" id="foto_diri" value="foto_diri">
@@ -112,7 +112,7 @@
                                             <img src="{{ asset('pas_foto/' . $pendaftar->foto_diri) }}" class="img-thumbnail img-fluid" style="height: 220px; object-fit: cover" alt="Foto Diri">
                                         </a>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
 
                             <div class="row">

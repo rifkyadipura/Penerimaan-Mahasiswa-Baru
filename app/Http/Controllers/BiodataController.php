@@ -122,7 +122,6 @@ class BiodataController extends Controller
      */
     public function update(Request $request, $pendaftar_id)
     {
-        $foto = Pendaftar::where('pendaftar_id', $pendaftar_id)->first();
         $nama_foto = "";
         $pendaftar = Pendaftar::where('pendaftar_id', $pendaftar_id)->first();
         $pendaftar->user_id = auth()->user()->id;
@@ -138,16 +137,7 @@ class BiodataController extends Controller
         $pendaftar->program_studi = $request->get('program_studi');
         $pendaftar->program_studi2 = $request->get('program_studi2');
         $pendaftar->jalur_masuk = $request->get('jalur_masuk');
-        $pendaftar->foto_diri = $foto->foto_diri;
         $pendaftar->keterangan="Belum Dilihat";
-
-        if ($request->hasFile('foto_diri')) {
-            $file = $request->file('foto_diri');
-            $path = public_path('/pas_foto');
-            $nama_foto = $file->getClientOriginalName();
-            $file->move($path, $nama_foto);
-        }
-        $pendaftar->foto_diri = $nama_foto;
         $pendaftar->update();
 
         return redirect()->route('biodata.index')->with('success', 'Berhasil Update Biodata');
